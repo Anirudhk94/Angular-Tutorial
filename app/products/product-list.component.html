@@ -23,7 +23,7 @@
 <div class="row">
     <div class="col-md-4 ">
       <label class="control-label">Filter :</label>
-      <input class="col-md-offset-1" type="text"  [(ngModel)] = 'listFilter'>
+      <input class="col-md-offset-1  " type="text"  [(ngModel)] = 'listFilter'>
     </div>
 </div>
 <div class="row">
@@ -60,9 +60,9 @@
                        [width]='imageWidth' 
                        [height]='imageHeight'></td>
               <td>{{ product.productName }}</td>
-              <td>{{ product.productCode }}</td>
+              <td>{{ product.productCode}}</td>
               <td>{{ product.releaseDate }}</td>
-              <td>{{ product.price | currency}}</td>
+              <td>{{ product.price | currency:'USD':true:'1.2-2'}}</td>
               <td>{{ product.starRating }}</td>
             </tr>
         </tbody>
