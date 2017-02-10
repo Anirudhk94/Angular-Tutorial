@@ -37,8 +37,9 @@
     <table class="table" *ngIf='products && products.length'>
         <thead>
         <tr>
-            <th>
-                <button class="btn btn-primary">
+            <th >
+                <button class="btn btn-primary" 
+                        (click) = 'toggleImage()'>
                     Show Image
                 </button>
             </th>
@@ -50,9 +51,12 @@
         </tr>
         </thead>
         <tbody >
-            <tr *ngFor = "let product of products">
-              <td><img [src]='product.imageUrl' [title]='product.productName' 
-                   [width]='imageWidth' [height]='imageHeight'></td>
+            <tr *ngFor = "let product of products" >
+              <td><img *ngIf = 'showImage'
+                       [src]='product.imageUrl' 
+                       [title]='product.productName' 
+                       [width]='imageWidth' 
+                       [height]='imageHeight'></td>
               <td>{{ product.productName }}</td>
               <td>{{ product.productCode }}</td>
               <td>{{ product.releaseDate }}</td>

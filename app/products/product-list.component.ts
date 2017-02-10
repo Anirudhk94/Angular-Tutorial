@@ -9,6 +9,7 @@ export class ProductListComponent {
     pageTitle: string = 'BuyProducts';
     imageWidth: string = '130';
     imageHeight: number = '110';
+    showImage:boolean = false;
     products: any[] = [
         {
             "productId": 1,
@@ -61,4 +62,10 @@ export class ProductListComponent {
             "imageUrl": "http://openclipart.org/image/300px/svg_to_png/120337/xbox-controller_01.png"
         }
     ];
+
+    toggleImage(): void {
+        this.showImage = !this.showImage;
+    }
+
+
 }

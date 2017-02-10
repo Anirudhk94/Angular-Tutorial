@@ -11,6 +11,7 @@ var ProductListComponent = (function () {
         this.pageTitle = 'BuyProducts';
         this.imageWidth = '130';
         this.imageHeight = '110';
+        this.showImage = false;
         this.products = [
             {
                 "productId": 1,
@@ -64,6 +65,9 @@ var ProductListComponent = (function () {
             }
         ];
     }
+    ProductListComponent.prototype.toggleImage = function () {
+        this.showImage = !this.showImage;
+    };
     return ProductListComponent;
 }());
 ProductListComponent = __decorate([
