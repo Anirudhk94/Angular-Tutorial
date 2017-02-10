@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">BuyProducts</a>
+      <a class="navbar-brand" href="#">{{pageTitle}}</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -22,19 +22,19 @@
 
 <form class="form-horizontal">
   <div class="form-group">
-    <label class="control-label col-sm-2" for="usr" ng-model="inp">Filter :</label>
+    <label class="control-label col-sm-2"  ng-model="inp">Filter :</label>
     <div class="col-sm-4">
       <input class="form-control">
     </div>
   </div>
 
   <div class="form-group">
-    <label class="control-label col-sm-2" for="usr">Filter by : </label>
+    <label class="control-label col-sm-2" >Filter by :</label>
   </div>
 </form>
 
-<div class="table-responsive">
-    <table class="table">
+<div class="table-responsive" >
+    <table class="table" *ngIf='products && products.length'>
         <thead>
         <tr>
             <th>
@@ -49,8 +49,15 @@
             <th>Rating</th>
         </tr>
         </thead>
-        <tbody>
-        
+        <tbody >
+            <tr *ngFor = "let product of products">
+              <td></td>
+              <td>{{ product.productName }}</td>
+              <td>{{ product.productCode }}</td>
+              <td>{{ product.releaseDate }}</td>
+              <td>{{ product.price | currency}}</td>
+              <td>{{ product.starRating }}</td>
+            </tr>
         </tbody>
     </table>
 </div>
