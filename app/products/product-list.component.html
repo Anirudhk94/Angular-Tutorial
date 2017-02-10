@@ -20,18 +20,20 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<form class="form-horizontal">
-  <div class="form-group">
-    <label class="control-label col-sm-2"  ng-model="inp">Filter :</label>
-    <div class="col-sm-4">
-      <input class="form-control">
+<div class="row">
+    <div class="col-md-4 ">
+      <label class="control-label">Filter :</label>
+      <input class="col-md-offset-1" type="text"  [(ngModel)] = 'listFilter'>
     </div>
-  </div>
-
-  <div class="form-group">
-    <label class="control-label col-sm-2" >Filter by :</label>
-  </div>
-</form>
+</div>
+<div class="row">
+    <div class=" col-md-4 ">
+      <h3>
+        <label class="control-label" >Filter by : </label>
+        <label class="control-label" > {{listFilter}}</label>
+      </h3>
+   </div>
+</div>
 
 <div class="table-responsive" >
     <table class="table" *ngIf='products && products.length'>

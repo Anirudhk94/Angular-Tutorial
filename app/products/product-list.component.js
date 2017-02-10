@@ -12,6 +12,7 @@ var ProductListComponent = (function () {
         this.imageWidth = '130';
         this.imageHeight = '110';
         this.showImage = false;
+        this.listFilter = 'hey';
         this.products = [
             {
                 "productId": 1,
