@@ -9,10 +9,10 @@ var core_1 = require("@angular/core");
 var ProductListComponent = (function () {
     function ProductListComponent() {
         this.pageTitle = 'BuyProducts';
-        this.imageWidth = '130';
-        this.imageHeight = '110';
+        this.imageWidth = 130;
+        this.imageHeight = 110;
         this.showImage = false;
-        this.listFilter = 'hey';
+        this.listFilter = '';
         this.products = [
             {
                 "productId": 1,
